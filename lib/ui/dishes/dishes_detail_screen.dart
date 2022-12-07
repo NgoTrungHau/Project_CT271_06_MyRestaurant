@@ -37,10 +37,12 @@ class _DishDetailScreenState extends State<DishDetailScreen> {
           title: Text(widget.dish.title,
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
+                color: Colors.white
               )),
           actions: [
             buildFavoriteButton(context, dish!),
           ],
+          iconTheme: const IconThemeData(color: Colors.white),
         ),
         body: SingleChildScrollView(
             child: Column(children: <Widget>[
@@ -59,7 +61,8 @@ class _DishDetailScreenState extends State<DishDetailScreen> {
             style: const TextStyle(
                 color: Colors.black87,
                 fontSize: 20,
-                fontWeight: FontWeight.bold),
+                fontWeight: FontWeight.bold
+            ),
           ),
           const SizedBox(
             height: 10,
@@ -140,6 +143,7 @@ class _DishDetailScreenState extends State<DishDetailScreen> {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
+                    color:Colors.white
                   )),
               backgroundColor: Theme.of(context).primaryColor,
             ),

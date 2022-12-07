@@ -99,13 +99,20 @@ class _EditDishScreenState extends State<EditDishScreen>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Edit Dish'),
+        title: const Text(
+          'Edit Dish',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.white
+          )
+        ),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.save),
             onPressed: _saveForm,
           ),
         ],
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       backgroundColor: const Color.fromARGB(255, 255, 237, 205),
       body: _isLoading

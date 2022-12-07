@@ -143,7 +143,9 @@ class _AuthCardState extends State<AuthCard> {
           color: Theme.of(context).primaryTextTheme.headline6?.color,
         ),
       ),
-      child: Text(_authMode == AuthMode.login ? 'LOGIN' : 'SIGN UP'),
+      child: Text(_authMode == AuthMode.login ? 'LOGIN' : 'SIGN UP',
+        style: const TextStyle(color: Colors.white)
+      ),
     );
   }
 

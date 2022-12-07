@@ -36,10 +36,17 @@ class _BookDishDetailScreenState extends State<BookDishDetailScreen> {
     final cart = context.read<ReservationsManager>();
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.dish.title),
+        title: Text(
+          widget.dish.title,
+          style: const TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.white
+          )
+        ),
         actions: [
           buildFavoriteButton(context, dish!)
-        ]
+        ],
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -56,8 +63,9 @@ class _BookDishDetailScreenState extends State<BookDishDetailScreen> {
             Text(
               '\$${widget.dish.price}',
               style: const TextStyle(
-                color: Colors.grey,
+                color: Colors.black87,
                 fontSize: 20,
+                fontWeight: FontWeight.bold
               ),
             ),
             const SizedBox(
@@ -148,6 +156,7 @@ class _BookDishDetailScreenState extends State<BookDishDetailScreen> {
                   style:TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
+                    color: Colors.white
                   )
                 ),
                 backgroundColor: Theme.of(context).primaryColor,
@@ -186,7 +195,7 @@ class _BookDishDetailScreenState extends State<BookDishDetailScreen> {
           icon: Icon(
             isFavorite ? Icons.favorite : Icons.favorite_border,
           ),
-          color: Colors.black,
+          color: const Color.fromARGB(255, 230, 0, 81),
           onPressed: () {
             ctx.read<DishesManager>().toggleFavoriteStatus(dish);
           },
