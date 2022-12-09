@@ -76,7 +76,7 @@ class _DishDetailScreenState extends State<DishDetailScreen> {
                 softWrap: true,
               )),
           const SizedBox(
-            height: 70,
+            height: 20,
           ),
           Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
             IconButton(
@@ -134,9 +134,6 @@ class _DishDetailScreenState extends State<DishDetailScreen> {
               }),
             )
           ]),
-          const SizedBox(
-            height: 20,
-          ),
           TextButton(
             child: Chip(
               label: const Text('Add to cart',
